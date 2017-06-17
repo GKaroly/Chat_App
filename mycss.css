@@ -1,0 +1,35 @@
+form {
+    border: 3px solid #c2c2a3;
+    width: 320px;
+    text-align: center;
+}
+
+input[type=text], input[type=password] {
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 6px;
+	display: block;
+	width: 300px;
+	margin: auto;
+}
+
+button {
+    background-color: #336600;
+    color: white;
+    padding: 10px 30px;
+    margin: 6px;
+    border: outset;
+    border-width: 2px;
+    cursor: pointer;
+    width: 300px;
+}
+
+button:hover {
+    /*opacity: 0.8;*/
+    background-color: white;
+    color: #336600;
+}
+
+label {
+	padding: 14px 4px;
+}
