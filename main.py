@@ -12,8 +12,11 @@ def hello():
     #return "Hello World!"
     return render_template("mainsite.html")
 
+@app.route("/login", methods=['POST'])
+def login():
+	return "Szia2"
 #http://flask.pocoo.org/docs/0.12/tutorial/
 
 if __name__ == "__main__":
-	print("MyProgram")
-	app.run()
+	print("MyProgram started running")
+	app.run(host="127.0.0.1", port=4000)
