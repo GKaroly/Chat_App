@@ -2,20 +2,27 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="mycss.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/appsite.css') }}">
         <title>App site</title>
     </head>
     <body>
-        <h1>App site</h1>
+        <h1>Welcome in the app!</h1>
+
+        <form action="/refresh" method="GET">
+            <button type="submit">Refresh channel:</button>
+        </form>
         
 
         <form action="/send" method="POST">
-            <label>Give a name</label>
-            <input type="text" name="username" required>
+            <label>Your name:</label>
+            <label><b>{{ signedUsername }}</b></label>
             
             <label>Message:</label>
             <textarea rows="4" cols="50" name="message">This is a sample text</textarea> 
             <button type="submit">Send</button>
+
+            <label>Channel:</label>
+            <textarea rows="30" cols="50" name="message">{{ channelContent }}</textarea> 
         </form>
 
     </body>
